@@ -1,4 +1,4 @@
-!(https://github.com/devcastroitalo/Passgen/blob/main/Screenshot.png)
+<img src="https://github.com/devcastroitalo/Passgen/blob/main/Screenshot.png" width="128"/>
 
 # Passgen
 A simple password generator that by default generates password with just lowercase letters and uppercase letter, but you can choice to generate a password with numbers or symbols or both.
