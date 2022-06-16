@@ -41,12 +41,19 @@ namespace Passgen
         }
 
         /// <summary>
-        /// Copy the generated password to clipboard
+        /// Copy the generated password to clipboard only if there is a password
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Btn_Clipboard_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(this.Password))
+            {
+                MessageBox.Show("No password generated", "Passgen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
             Clipboard.SetText(this.Password);
             MessageBox.Show("Password copied to clipboard", "Passgen", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
